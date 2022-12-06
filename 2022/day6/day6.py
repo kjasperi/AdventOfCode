@@ -8,12 +8,7 @@ line = get_lines_from_file().strip()
 
 def solve(length):
     for idx in range(length - 1, len(line)):
-        subline = line[idx - length + 1 : idx + 1]
-        test = set()
-        for ch in subline:
-            test.add(ch)
-        
-        if len(test) == length:
+        if len(set(line[idx - length + 1 : idx + 1])) == length:
             return idx + 1
 
 print(solve(4))
