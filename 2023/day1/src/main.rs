@@ -4,15 +4,11 @@ use std::ops::Deref;
 
 use regex::Regex;
 
-
-/// The input function can return any type that implements Clone
 fn parse_input(file_path: &String) -> Vec<String>{
     dbg!(file_path);
     return std::fs::read_to_string(file_path).unwrap().lines().map(String::from).collect();
 }
 
-/// The part functions must take the input as an argument and return
-/// anything implementing Display
 fn part1(input: &[String]) {
     let mut sum = 0;
     for line in input{
