@@ -20,9 +20,6 @@ for line in lines:
 result = 0
 
 for idx, a in enumerate(locationA):
-    count = 0
-    for b in locationB:
-        if a == b:
-            count += 1
+    count = locationB.count(a)
     result += count * a
 print(result)
