@@ -29,7 +29,6 @@ def test_word(word):
     try:
         return int(lhs) * int(rhs)
     except:
-        print("fel", lhs, rhs)
         return 0
     
 
