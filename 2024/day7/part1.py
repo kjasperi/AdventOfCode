@@ -8,10 +8,6 @@ def get_data():
 data = get_data()
 lines = data.split("\n")
 
-print(lines)
-
-OPERATIONS = ['mult', 'add']
-
 def test(test_val, numbers, total):
     if len(numbers) == 1:
         if total * numbers[0] == test_val:

@@ -12,7 +12,6 @@ C = len(lines[0])
 
 antennas = {}
 
-anti_nodes = {}
 anti_set = set()
 for r_id, row in enumerate(lines):
     for c_id, ch in enumerate(row):
@@ -24,8 +23,7 @@ for r_id, row in enumerate(lines):
 
 for ant in antennas:
     positions = antennas[ant]
-    if ant not in anti_nodes:
-        anti_nodes[ant] = []  
+
     for i in range(len(positions)):
         for j in range(i + 1, len(positions)):
             p1 = positions[i]

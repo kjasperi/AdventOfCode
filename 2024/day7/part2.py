@@ -7,14 +7,8 @@ def get_data():
 
 data = get_data()
 lines = data.split("\n")
-
-print(lines)
-
-OPERATIONS = ['mult', 'add']
-
 def test(test_val, numbers, total):
-    concat = ""
-    concat = concat + str(total) + str(numbers[0])
+    concat = int(str(total) + str(numbers[0]))
     add_total = total + numbers[0]
     mult_total = total * numbers[0]
 
@@ -24,7 +18,7 @@ def test(test_val, numbers, total):
         if total + numbers[0] == test_val:
             return True
 
-        if int(concat) == test_val:
+        if concat == test_val:
             return True
         return False
 
@@ -33,7 +27,7 @@ def test(test_val, numbers, total):
         return True
     elif test(test_val, numbers[1:], mult_total):
         return True
-    elif test(test_val, numbers[1:], int(concat)):
+    elif test(test_val, numbers[1:], concat):
         return True
     return False
 
